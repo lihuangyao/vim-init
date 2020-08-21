@@ -14,7 +14,7 @@
 "
 "======================================================================
 " vim: set ts=4 sw=4 tw=78 noet :
-
+let mapleader =" "
 
 "----------------------------------------------------------------------
 " INSERT 模式下使用 EMACS 键位
@@ -229,7 +229,7 @@ endif
 "----------------------------------------------------------------------
 
 " 自动打开 quickfix window ，高度为 6
-let g:asyncrun_open = 6
+let g:asyncrun_open = 8
 
 " 任务结束时候响铃提醒
 let g:asyncrun_bell = 1
@@ -244,7 +244,7 @@ nnoremap <silent> <F9> :AsyncRun gcc -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILED
 nnoremap <silent> <F5> :call ExecuteFile()<cr>
 
 " F7 编译项目
-nnoremap <silent> <F7> :AsyncRun -cwd=<root> make <cr>
+nnoremap <silent> <F7> :AsyncRun -cwd=<root>/server/Build/Debug/ ./MakeRaw <cr>
 
 " F8 运行项目
 nnoremap <silent> <F8> :AsyncRun -cwd=<root> -raw make run <cr>
