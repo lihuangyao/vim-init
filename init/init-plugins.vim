@@ -15,8 +15,9 @@
 "----------------------------------------------------------------------
 if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
-	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
+	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc', 'terminal']
 	let g:bundle_group += ['leaderf']
+	let g:bundle_group += ['translate']
 endif
 
 
@@ -112,7 +113,9 @@ if index(g:bundle_group, 'basic') >= 0
 
 	" 使用 ALT+e 会在不同窗口/标签上显示 A/B/C 等编号，然后字母直接跳转
 	Plug 't9md/vim-choosewin'
-
+	
+	" 终端插件，用来打开内置终端
+	Plug 'skywind3000/vim-terminal-help'
 	" 提供基于 TAGS 的定义预览，函数参数预览，quickfix 预览
 	Plug 'skywind3000/vim-preview'
 
@@ -170,6 +173,8 @@ if index(g:bundle_group, 'enhanced') >= 0
 	" 提供 gist 接口
 	Plug 'lambdalisue/vim-gista', { 'on': 'Gista' }
 	
+	"翻译工具
+	Plug 'voldikss/vim-translator'
 	" ALT_+/- 用于按分隔符扩大缩小 v 选区
 	map <m-=> <Plug>(expand_region_expand)
 	map <m--> <Plug>(expand_region_shrink)
@@ -609,3 +614,19 @@ let g:ycm_filetype_whitelist = {
 			\ }
 
 
+"----------------------------------------------------------------------
+" delimit自动补全括号，引号，
+" 开启自动换行
+"----------------------------------------------------------------------
+
+
+"
+"
+"
+
+"-----------
+"翻译插件
+"-----------
+
+if index(g:bundle_group, 'basic') >= 0
+endif
